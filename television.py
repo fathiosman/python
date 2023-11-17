@@ -42,9 +42,11 @@ class Television:
             self._volume = max(self._volume - 1, self.MIN_VOLUME)
 
     def display_info(self) -> str:
-        """Send the values of the TV object in the specified format."""
+        """Send the values of the TV object in the specified format.
+        :return: A string containing information about the TV."""
         return f"Power = {self._status}, Channel = {self._channel}, Volume = {self._volume}"
 
     def __str__(self) -> str:
-        """Override the string representation of the TV object."""
+        """Override the string representation of the TV object.
+        :return: tv status"""
         return self.display_info()
