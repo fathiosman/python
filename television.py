@@ -17,7 +17,8 @@ class Television:
 
     def mute(self) -> None:
         """Mute and unmute the TV when it's on by changing the value of the muted variable."""
-        self._muted = not self._muted
+        if self._status:
+            self._muted = not self._muted
 
     def channel_up(self) -> None:
         """Increase the TV channel value when the TV is on."""
