@@ -26,6 +26,7 @@ def test_unmute(tv):
     tv.mute()  # unmute
     assert tv._muted is False
 
+
 def test_tv_details_powered_on(tv):
     tv.power()
     assert tv.display_info() == f"Power = True, Channel = {tv._channel}, Volume = {tv._volume}"
